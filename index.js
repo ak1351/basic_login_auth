@@ -18,7 +18,7 @@ app.use((req, res, next) => {
         if(!(username === 'admin' && password === 'admin123')){
             var err = new Error('Not Authenticated!')
             
-            res.status(401).set('WWW-simpleloginauthentication', 'Basic')
+            res.status(401).set('WWW-loginauthentication', 'Basic')
             next(err)
         } 
         res.status(200)
